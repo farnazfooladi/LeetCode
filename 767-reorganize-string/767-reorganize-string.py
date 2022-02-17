@@ -6,13 +6,15 @@ class Solution(object):
         """
         maxheap =[]
         count = Counter(s) # Hashmap, count each char
-        maxheap = [[-cnt, char] for char, cnt in count.items()]
+        # maxheap = [[-cnt, char] for char, cnt in count.items()]
 
-        # for char, cnt in count.items():
-        #     heapq.heappush(maxheap, (-cnt, char))
-        heapq.heapify(maxheap) # O(n)
+        for char, cnt in count.items():
+            heapq.heappush(maxheap, [-cnt, char])
+        # heapq.heapify(maxheap) # O(n)
         
         print(maxheap)
+        #[[-2, u'a'], [-2, u'c'], [-2, u'b']]
+
         
         prev = None
         res = ""
