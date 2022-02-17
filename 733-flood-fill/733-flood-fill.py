@@ -20,6 +20,10 @@ class Solution(object):
             self.fill(image, i+1, j, oldColor, newColor)
             self.fill(image, i, j+1, oldColor, newColor)
             self.fill(image, i-1, j, oldColor, newColor)
+            
+            
+            
+            
 #         startPixel = image[sr][sc]
         
 #         self.dfs(image, sr, sc, newColor, startPixel)
