@@ -18,7 +18,7 @@ class Solution(object):
             print(q)
 
             while q:
-                row, col = q.popleft()
+                row, col = q.pop()
                 direction = [[1,0], [-1,0], [0,1], [0,-1]]
                 for dr, dc in direction:
                     ro, co = row+dr, col+dc
